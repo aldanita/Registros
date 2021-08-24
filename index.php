@@ -12,14 +12,18 @@
 
     	<input type="text" name="lastname" placeholder="Apellido">
 
-    	<input type="text" name="phone" placeholder="Telefono">
+    	<input type="number" name="phone" placeholder="Celular">
 
     	<input type="text" name="adress" placeholder="Dirección">
+
     	<input type="email" name="email" placeholder="Email">
 
-    	<input type="text" name="password" placeholder="Contraseña">
+    	<input type="password" name="password" placeholder="Contraseña">
 
-    	<input type="text" name="password" placeholder="Repita su contraseña">
+    	<input type="password" name="rptpassword" placeholder="Repita su contraseña">
+
+
+		
     	<input type="submit" name="register">
     </form>
         <?php 

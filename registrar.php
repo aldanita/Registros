@@ -10,14 +10,20 @@ if (isset($_POST['register'])) {
 	    $adress = trim($_POST['adress']);
 	    $email = trim($_POST['email']);
 	    $password = trim($_POST['password']);
-	    $password = trim($_POST['password']);
-	    $fechareg = date("d/m/y");
-	    $consulta = "INSERT INTO datos(nombre, apellido, telefono, direccion, email, contraseña, rptcontraseña, fecha_reg) 
-		VALUES ('$name','$lastname','$phone','$adress','password','password','$email','$fechareg')";
+
+		if($_POST["password"]==$_POST["rptpassword"])
+		{
+ 	    # son iguales
+		}else{
+	     # no son iguales
+		}
+
+	    $consulta = "INSERT INTO datos(nombre, apellido, telefono, direccion, email, contraseña) 
+		VALUES ('$name','$lastname','$phone','$adress','$password','$email')";
 	    $resultado = mysqli_query($conex,$consulta);
 	    if ($resultado) {
 	    	?> 
-	    	<h3 class="ok">¡Te has inscripto correctamente!</h3>
+	    	<h3 class="ok">¡Te has registrado correctamente!</h3>
            <?php
 	    } else {
 	    	?> 
